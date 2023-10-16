@@ -4,17 +4,37 @@ Should include the following.
 1. Problem Statement
 Define a problem someone is having that can be solved with software.
 
-Note: the problem does not have to be original. It's absolutely okay to recreate an existing application: Instagram, Slack, etc.
+This portfolio website serves multiple purposes. Primarily, it allows users to learn more about me, my skills, and my capabilities.
 
-Example
+The current plan for the site includes:
+
+A main Software Engineering portfolio page, possibly with a separate selection page to navigate between the different sections.
+An art gallery section to display various types of art, photos, and videos.
+An investment dashboard that could potentially have an extensive feature set. While I'm considering a secure input feature for users to track their own investments, this is a stretch goal due to security concerns. Alternatively, I could hard-code the dashboard to only display my trades.
+Examples:
+
+Examples:
+JAY TRADING: https://coda.io/@presh-dineshkumar/jay-trading
+DEBANK: https://debank.com/
+MINT : https://mint.intuit.com/
+
+
+
+
+<!-- Note: the problem does not have to be original. It's absolutely okay to recreate an existing application: Instagram, Slack, etc. -->
+
+<!-- Example
 Running clubs across the world host group runs that are open to the public. Group runs range from an impromptu weekend run around the lake to a formal event (generate interest in the club, say thank you to friends, family, and sponsors, celebrate an occasion, etc). The important thing is that anyone can join a group run. You don't have to be a running club member.
 
 Group run discovery is difficult. Some running clubs post a message on their home page. Others post on social media. Still others don't post anything at all and hope that word-of-mouth will spread the message. When clubs do post a message, it's usually not on a formal calendar or easy to find on a map. It's not clear if the run has already occurred.
 
-Worse, there's no easy way to sign up for a group run. Clubs never know who will show up. If a group run is limited, it's embarrassing when too many people show up. It's also a little embarrassing when no one shows up.
+Worse, there's no easy way to sign up for a group run. Clubs never know who will show up. If a group run is limited, it's embarrassing when too many people show up. It's also a little embarrassing when no one shows up. -->
+
+
+
 
 2. Technical Solution
-Briefly describe a technical solution to your problem with a couple concrete scenarios.
+<!-- Briefly describe a technical solution to your problem with a couple concrete scenarios.
 
 Example
 Create an application for posting group runs on a formal calendar. Make it easy to sign up for runs.
@@ -23,12 +43,12 @@ Scenario 1
 Emma is vacationing in Austin for two weeks. She wants to relax and enjoy her vacation, but she also wants to keep up on her running. Running helps her relax. She uses the Group Run application to quickly search for runs during her two-week window, located in Austin. She signs up for one or two. Running clubs in Austin know the best routes and she gets a chance to meet new people.
 
 Scenario 2
-Kelsey isn't a member of a running club, he's not ready for that commitment, but he does like to run with a group once in a while. Each weekend, he uses the Group Run application to browse runs near his Chicago neighborhood. If it feels right, he signs up and runs. There are a few running clubs near him. He doesn't have to join a club. He can pick and choose only the runs that interest him.
+Kelsey isn't a member of a running club, he's not ready for that commitment, but he does like to run with a group once in a while. Each weekend, he uses the Group Run application to browse runs near his Chicago neighborhood. If it feels right, he signs up and runs. There are a few running clubs near him. He doesn't have to join a club. He can pick and choose only the runs that interest him. -->
 
 3. Glossary
 Define key domain terms. This won't map one-to-one with model classes, but it may be close.
 
-Example
+<!-- Example
 Running Club
 An organization based on a shared love of running. Clubs have members. They host runs. Some are informal with infrequent runs. Others are large, have budgets, and charge membership fees.
 
@@ -42,10 +62,10 @@ Club Admin
 A running club member with an administrator role. They have more privileges in the Group Run application. All admins are members, but not all members are admins.
 
 Run
-A running event with a specific time, date, and location. A run may also include a route (stretch goal).
+A running event with a specific time, date, and location. A run may also include a route (stretch goal). -->
 
 4. High Level Requirement
-Briefly describe what each user role/authority can do. (These are user stories.)
+<!-- Briefly describe what each user role/authority can do. (These are user stories.)
 
 Example
 Create a run (MEMBER, ADMIN).
@@ -55,9 +75,9 @@ Approve a run (ADMIN).
 Browse runs (anyone).
 Sign up for a run (authenticated).
 Apply for membership (authenticated).
-Approve a membership (ADMIN).
+Approve a membership (ADMIN). -->
 5. User Stories/Scenarios
-Elaborate use stories.
+<!-- Elaborate use stories.
 
 Example
 Create a Run
@@ -125,4 +145,4 @@ Through an administrative UI, the ADMIN user finds pending memberships for their
 
 Precondition: User must be logged in with the ADMIN role.
 
-Post-condition: Data is not deleted. The membership is set to a rejected status. This prevents the runner from applying again and again.
+Post-condition: Data is not deleted. The membership is set to a rejected status. This prevents the runner from applying again and again. -->
