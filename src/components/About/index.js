@@ -1,12 +1,26 @@
-import './index.scss'
-
+import React, { useState, useEffect } from 'react';
+import './index.scss';
+import AnimatedLetters from '../AnimatedLetters';  
 const About = () => {
+  const [letterClass, setLetterClass] = useState('text-animate');
 
-    return (
-        <>
-        <div className="container about-page">
-          <div className="text-zone">
-            <h1>About me</h1>
+  useEffect(() => {
+    setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 3000);
+  }, []);
+
+  return (
+    <>
+      <div className="container about-page">
+        <div className="text-zone">
+          <h1>
+            <AnimatedLetters 
+              letterClass={letterClass}
+              strArray={['A', 'B', 'O', 'U', 'T', ' ', 'M', 'E']}
+              idx={15}
+            />
+          </h1>
             <p>
             I'm relatively new to the field of Software Engineering,
             but I've been actively enhancing my skills through 
