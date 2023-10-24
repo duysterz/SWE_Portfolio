@@ -1,0 +1,70 @@
+Folder PATH listing for volume Windows
+Volume serial number is 265A-41C7
+C:.
+¦   .gitignore
+¦   Backend.zip
+¦   directory_tree.txt
+¦   HELP.md
+¦   mvnw
+¦   mvnw.cmd
+¦   pom.xml
+¦   
++---.mvn
+¦   +---wrapper
+¦           maven-wrapper.jar
+¦           maven-wrapper.properties
+¦           
++---src
+¦   +---main
+¦   ¦   +---java
+¦   ¦   ¦   +---Backend
+¦   ¦   ¦       ¦   BackendApplication.java
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---Controller
+¦   ¦   ¦       ¦       PhotoController.java
+¦   ¦   ¦       ¦       VideoController.java
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---Models
+¦   ¦   ¦       ¦       Album.java
+¦   ¦   ¦       ¦       Photo.java
+¦   ¦   ¦       ¦       Video.java
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---Repository
+¦   ¦   ¦       ¦       AlbumRepository.java
+¦   ¦   ¦       ¦       PhotoRepository.java
+¦   ¦   ¦       ¦       VideoRepository.java
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---Service
+¦   ¦   ¦               AlbumService.java
+¦   ¦   ¦               PhotService.java
+¦   ¦   ¦               VideoService.java
+¦   ¦   ¦               
+¦   ¦   +---resources
+¦   ¦       ¦   application.properties
+¦   ¦       ¦   
+¦   ¦       +---static
+¦   ¦       +---templates
+¦   +---test
+¦       +---java
+¦           +---Backend
+¦                   BackendApplicationTests.java
+¦                   
++---target
+    +---classes
+    ¦   ¦   application.properties
+    ¦   ¦   
+    ¦   +---Backend
+    ¦       ¦   BackendApplication.class
+    ¦       ¦   
+    ¦       +---Controller
+    ¦       +---Models
+    ¦       +---Repository
+    ¦       +---Service
+    +---generated-sources
+    ¦   +---annotations
+    +---generated-test-sources
+    ¦   +---test-annotations
+    +---test-classes
+        +---Backend
+                BackendApplicationTests.class
+                
