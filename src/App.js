@@ -3,8 +3,11 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
-import Portfolio from './components/ArtGalleryProject';
+import Images from './components/Images';
+import Videos from './components/Videos';
+import Stocks from './components/Stocks';
 import './App.scss';
+
 
 function App() {
   return (
@@ -14,7 +17,9 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+          <Route path="images" element={<Images />} />
+          <Route path="stocks" element={<Stocks />} />
+          <Route path="videos" element={<Videos />} />
         </Route>
       </Routes>
     </>

@@ -1,0 +1,35 @@
+.images-page {
+  display: flex;  
+  justify-content: space-between;  
+  h1 {
+    font-size: 53px;
+    font-family: 'Coolvetica';
+    color: #ffd700;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 40px;
+    
+    .text-animate-hover {
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;  
+    width: 70%; 
+
+    div { 
+      cursor: pointer;
+    }
+
+    img {
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
+  }
+}

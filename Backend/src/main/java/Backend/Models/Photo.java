@@ -1,38 +1,40 @@
+package Backend.Models;
+
 public class Photo {
-    private int id;
-    private String name;
-    private String url;
+    private int photoID;
+    private String title;
+    private String photoURL;
 
     public Photo() {
     }
 
-    public Photo(int id, String name, String url) {
-        this.id = id;
-        this.name = name;
-        this.url = url;
+    public Photo(int photoID, String title, String photoURL) {
+        this.photoID = photoID;
+        this.title = title;
+        this.photoURL = photoURL;
     }
 
-    public int getId() {
-        return id;
+    public int getPhotoID() {
+        return photoID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPhotoID(int photoID) {
+        this.photoID = photoID;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getUrl() {
-        return url;
+    public String getPhotoURL() {
+        return photoURL;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setPhotoURL(String photoURL) {
+        this.photoURL = photoURL;
     }
 }

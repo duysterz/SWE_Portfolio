@@ -95,12 +95,24 @@
         }
       }
   
-      a.portfolio-link {
+      a.images-link {
         &:after {
-          content: 'PORTFOLIO';
+          content: 'IMAGES';
         }
       }
   
+      a.videos-link {
+        &:after {
+          content: 'VIDEOS';
+        }
+      }
+
+      a.stocks-link {
+        &:after {
+          content: 'STOCKS';
+        }
+      }
+
       a.active {
         svg {
           color: #ffd700;

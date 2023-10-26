@@ -40,7 +40,8 @@
   
   .container.contact-page,
   .container.about-page,
-  .container.portfolio-page {
+  .container.images-page 
+  {
     
       h1 {
         font-size: 53px;
@@ -113,6 +114,7 @@
       }
     }
   }
+
   
   @media screen and (max-width: 1200px) {
     .page {
@@ -126,7 +128,8 @@
   
       &.contact-page,
       &.about-page,
-      &.portfolio-page {
+      &.images-page 
+      {
         .text-zone {
           position: initial;
           transform: none;

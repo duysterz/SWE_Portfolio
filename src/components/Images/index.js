@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import AnimatedLetters from '../AnimatedLetters';
+import './index.scss';
+
+const Images = () => {
+  const [letterClass, setLetterClass] = useState('text-animate');
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 3000);
+
+    axios.get('http://localhost:8080/photo') 
+      .then(response => {
+        setImages(response.data);
+      })
+      .catch(error => {
+        console.error('There was an error fetching images:', error);
+      });
+  }, []);
+
+  const handleClick = (title) => {
+    alert(`Image Title: ${title}`);
+  };
+
+  return (
+    <div className="container images-page">
+      <div className="text-zone">
+        <h1>
+          <AnimatedLetters 
+            letterClass={letterClass}
+            strArray={['I', 'M', 'A', 'G', 'E', 'S']}
+            idx={15}
+          />
+        </h1>
+      </div>
+      <div className="image-gallery">
+        {images.map(image => (
+          <div key={image.photoID} onClick={() => handleClick(image.title)}>
+            <img src={image.photoURL} alt={image.title} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Images;

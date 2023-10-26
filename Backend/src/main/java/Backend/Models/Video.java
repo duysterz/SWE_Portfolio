@@ -1,40 +1,40 @@
 package Backend.Models;
 
 public class Video {
-    private int id;
-    private String name;
-    private String url;
+    private int vidID;
+    private String description;
+    private String vidURL;
 
     public Video() {
     }
 
-    public Video(int id, String name, String url) {
-        this.id = id;
-        this.name = name;
-        this.url = url;
+    public Video(int vidID, String description, String vidURL) {
+        this.vidID = vidID;
+        this.description = description;
+        this.vidURL = vidURL;
     }
 
-    public int getId() {
-        return id;
+    public int getVidID() {
+        return vidID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setVidID(int vidID) {
+        this.vidID = vidID;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getUrl() {
-        return url;
+    public String getVidURL() {
+        return vidURL;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setVidURL(String vidURL) {
+        this.vidURL = vidURL;
     }
 }

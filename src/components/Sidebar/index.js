@@ -2,8 +2,8 @@ import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
 import Logo from '../../assets/images/Hang-Loose-Black-Circle.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faEnvelope,faSuitcase,faBars, faClose} from '@fortawesome/free-solid-svg-icons';
-import {faLinkedin,faGithub,faYoutube} from '@fortawesome/free-brands-svg-icons'
+import { faHome, faUser, faEnvelope, faBars, faClose, faImage, faFilm, faChartColumn } from '@fortawesome/free-solid-svg-icons';
+import {faLinkedin,faGithub,faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 
 
@@ -36,11 +36,27 @@ const Sidebar = () => {
         </NavLink>
         <NavLink
           activeclassname="active"
-          className="portfolio-link"
-          to="/portfolio"
+          className="images-link"  
+          to="/images"  
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
+      <FontAwesomeIcon icon={faImage} color="#4d4d4e" />
+        </NavLink>
+        <NavLink
+          activeclassname="active"
+          className="videos-link"  
+          to="/videos"  
+          onClick={() => setShowNav(false)}
+        >
+      <FontAwesomeIcon icon={faFilm} color="#4d4d4e" />
+        </NavLink>
+        <NavLink
+          activeclassname="active"
+          className="stocks-link"  
+          to="/stocks"  
+          onClick={() => setShowNav(false)}
+        >
+      <FontAwesomeIcon icon={faChartColumn} color="#4d4d4e" />
         </NavLink>
         <NavLink
           activeclassname="active"
@@ -50,6 +66,7 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
+        
         <FontAwesomeIcon 
           onClick={() => setShowNav(false)}
           icon={faClose}

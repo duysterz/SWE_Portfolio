@@ -8,6 +8,12 @@ const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const form = useRef();
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 3000);
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
     
@@ -25,7 +31,7 @@ const Contact = () => {
       }
     )
   }
-//need to work on this email thing
+
   return (
     <>
       <div className="container contact-page">
