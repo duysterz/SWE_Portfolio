@@ -2,15 +2,15 @@ package Backend.Models;
 
 public class Video {
     private int vidID;
-    private String description;
+    private String title;
     private String vidURL;
 
     public Video() {
     }
 
-    public Video(int vidID, String description, String vidURL) {
+    public Video(int vidID, String title, String vidURL) {
         this.vidID = vidID;
-        this.description = description;
+        this.title = title;
         this.vidURL = vidURL;
     }
 
@@ -22,13 +22,11 @@ public class Video {
         this.vidID = vidID;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTitle() {
+        return title;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    public void setTitle(String title) {this.title = title;}
 
     public String getVidURL() {
         return vidURL;

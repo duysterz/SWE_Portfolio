@@ -6,6 +6,7 @@ import './index.scss';
 const Images = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const [images, setImages] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -21,8 +22,12 @@ const Images = () => {
       });
   }, []);
 
-  const handleClick = (title) => {
-    alert(`Image Title: ${title}`);
+  const handleClick = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeFullImage = () => {
+    setSelectedImage(null);
   };
 
   return (
@@ -37,12 +42,18 @@ const Images = () => {
         </h1>
       </div>
       <div className="image-gallery">
-        {images.map(image => (
-          <div key={image.photoID} onClick={() => handleClick(image.title)}>
+        {images.map((image, index) => (
+          <div key={image.photoID} onClick={() => handleClick(image)}>
             <img src={image.photoURL} alt={image.title} />
+            <div className="overlay">{image.title}</div>
           </div>
         ))}
       </div>
+      {selectedImage && (
+        <div className="full-image" onClick={closeFullImage}>
+          <img src={selectedImage.photoURL} alt={selectedImage.title} />
+        </div>
+      )}
     </div>
   );
 };

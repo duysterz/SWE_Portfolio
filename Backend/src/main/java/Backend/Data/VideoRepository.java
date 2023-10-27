@@ -17,13 +17,13 @@ public class VideoRepository {
     private JdbcTemplate jdbcTemplate;
 
     public List<Video> findAll() {
-        String sql = "SELECT * FROM videos";
+        String sql = "SELECT VidID, VidURL, Title FROM videos";
         return jdbcTemplate.query(sql, new VideoRowMapper());
     }
 
     public int insert(Video video) {
-        String sql = "INSERT INTO videos (Description, VidURL) VALUES (?, ?)";
-        return jdbcTemplate.update(sql, video.getDescription(), video.getVidURL());
+        String sql = "INSERT INTO videos (VidURL, Title) VALUES (?, ?)";
+        return jdbcTemplate.update(sql, video.getTitle(), video.getVidURL());
     }
 
     public int deleteById(int VidID) {
@@ -32,16 +32,16 @@ public class VideoRepository {
     }
 
     public int update(Video video) {
-        String sql = "UPDATE videos SET Description = ?, VidURL = ? WHERE VidID = ?";
-        return jdbcTemplate.update(sql, video.getDescription(), video.getVidURL(), video.getVidID());
+        String sql = "UPDATE videos SET Title = ?, VidURL = ? WHERE VidID = ?";
+        return jdbcTemplate.update(sql, video.getTitle(), video.getVidURL(), video.getVidID());
     }
 
     private static final class VideoRowMapper implements RowMapper<Video> {
         public Video mapRow(ResultSet rs, int rowNum) throws SQLException {
             Video video = new Video();
             video.setVidID(rs.getInt("VidID"));
-            video.setDescription(rs.getString("Description"));
             video.setVidURL(rs.getString("VidURL"));
+            video.setTitle(rs.getString("Title"));
             return video;
         }
     }

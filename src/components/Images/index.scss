@@ -1,35 +1,70 @@
-.images-page {
-  display: flex;  
-  justify-content: space-between;  
-  h1 {
-    font-size: 53px;
-    font-family: 'Coolvetica';
-    color: #ffd700;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 40px;
-    
-    .text-animate-hover {
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
+.container.images-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;  
+}
 
-  .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;  
-    width: 70%; 
+.text-zone h1 {
+  font-size: 53px;
+  font-family: 'Coolvetica';
+  color: #ffd700;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
 
-    div { 
-      cursor: pointer;
-    }
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
 
-    img {
-      max-width: 200px;
-      margin-bottom: 10px;
-    }
-  }
+.image-gallery div {
+  position: relative;
+  cursor: pointer;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-gallery .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.image-gallery div:hover .overlay {
+  opacity: 1;
+  font-size: 24px;
+}
+
+.full-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.full-image img {
+  max-width: 100%;
+  max-height: 100%;
 }

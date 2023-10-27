@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/video")
+@CrossOrigin(origins = "http://localhost:3000")
 public class VideoController {
 
     @Autowired
