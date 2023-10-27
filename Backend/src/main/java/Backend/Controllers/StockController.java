@@ -1,6 +1,18 @@
 package Backend.Controllers;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@RestController
+@RequestMapping("/api/stocks")
+public class StockController {
+apackage Backend.Controllers;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,32 +22,41 @@ import org.springframework.web.client.RestTemplate;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController
-@RequestMapping("/stock")
-@CrossOrigin(origins = "http://localhost:3000")
-public class StockController {
+    @RestController
+    @RequestMapping("/stock")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public class StockController {
 
 
-    @GetMapping
-    public ResponseEntity<Map<String, String>> getStockPrices() {
-        String[] stockSymbols = {"AAPL", "MSFT"};
-        String apiKey = "WIZNQ2QI8W4FQV1Z";
-        Map<String, String> stockPrices = new HashMap<>();
+        @GetMapping
+        public ResponseEntity<Map<String, String>> getStockPrices() {
+            String[] stockSymbols = {"AAPL", "MSFT"};
+            String apiKey = "GQ3UN05QR06NPOSF";
+            Map<String, String> stockPrices = new HashMap<>();
 
-        RestTemplate restTemplate = new RestTemplate();
-        for (String stockSymbol : stockSymbols) {
-            String url = String.format("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=%s&interval=5min&apikey=%s", stockSymbol, apiKey);
+            RestTemplate restTemplate = new RestTemplate();
+            for (String stockSymbol : stockSymbols) {
+                String url = String.format("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=%s&interval=5min&apikey=%s", stockSymbol, apiKey);
 
-            try {
-                Map<String, Object> response = restTemplate.getForObject(url, Map.class);
-                Map<String, Map<String, String>> timeSeries = (Map<String, Map<String, String>>) response.get("Time Series (5min)");
-                String latestTime = timeSeries.keySet().iterator().next();
-                String latestPrice = timeSeries.get(latestTime).get("4. close");
-                stockPrices.put(stockSymbol, latestPrice);
-            } catch (Exception e) {
-                return ResponseEntity.status(500).body(null);
+                try {
+                    Map<String, Object> response = restTemplate.getForObject(url, Map.class);
+                    Map<String, Map<String, String>> timeSeries = (Map<String, Map<String, String>>) response.get("Time Series (5min)");
+                    String latestTime = timeSeries.keySet().iterator().next();
+                    String latestPrice = timeSeries.get(latestTime).get("4. close");
+                    stockPrices.put(stockSymbol, latestPrice);
+                } catch (Exception e) {
+                    return ResponseEntity.status(500).body(null);
+                }
             }
+            return ResponseEntity.ok(stockPrices);
         }
-        return ResponseEntity.ok(stockPrices);
+    }
+    @GetMapping("/stock")
+    public String getStock(@RequestParam String ticker) {
+        System.out.println("Received request for ticker: " + ticker);
+        String url = "https://cloud.iexapis.com/stable/stock/" + ticker + "/quote?token=pk_2f4758763b98424a992dcb7208945262";
+        RestTemplate restTemplate = new RestTemplate();
+        String result = restTemplate.getForObject(url, String.class);
+        return result;
     }
 }
