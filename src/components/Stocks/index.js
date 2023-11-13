@@ -17,7 +17,7 @@ const Stocks = () => {
                 const response = await axios.get('http://localhost:8080/stock');
                 setStockPrices(response.data);
             } catch (error) {
-                console.error('Failed to fetch stock prices', error);
+                // console.error('Failed to fetch stock prices', error);
             }
         };
 

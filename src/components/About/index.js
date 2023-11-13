@@ -22,27 +22,13 @@ const About = () => {
             />
           </h1>
             <p>
-            I'm relatively new to the field of Software Engineering,
-            but I've been actively enhancing my skills through 
-            various online bootcamps and courses. 
-            These educational experiences have provided me with a 
-            solid foundation in coding, problem-solving, and 
-            software development practices.
+            I've recently entered the software engineering domain, and I'm continuously sharpening my abilities through diverse bootcamps and educational courses. These programs have equipped me with robust knowledge in programming, tackling complex problems, and understanding the best practices in software creation.
           </p>
           <p align="LEFT">
-          My interest has particularly gravitated towards Front-End 
-          Development. I enjoy the creative aspect of building user 
-          interfaces and the immediate impact it has on the user 
-          experience. The blend of design and technology in front-end
-          work excites me, and I'm keen on diving deeper into this 
-          area.
+          My enthusiasm is particularly strong for Front-End Development. I find the process of crafting user interfaces thrilling, as it combines artistic design with technological innovation, significantly affecting how users interact with a product. I am excited to delve further into this speciality.
           </p>
           <p>
-          In addition to front-end, I've also developed a strong 
-          interest in Data Analysis. The ability to make data-driven 
-          decisions and uncover insights from raw data fascinates me. 
-          I'm eager to explore the intersection of data analysis and 
-          software development as I continue my journey in tech.
+          Moreover, Data Analysis has captured my interest. The prospect of drawing meaningful insights and guiding decisions based on data is intriguing to me. I am keen to delve into how data analysis can be integrated with software engineering to enhance technological solutions.
           </p>
           </div>
         </div>

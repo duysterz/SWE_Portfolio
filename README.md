@@ -1,8 +1,14 @@
+Setup Instructions:
+
+Execute all SQL scripts located in the "sql" folder, focusing on running the tables (do not perform inserts).
+Launch the backend application.
+Start the React app using NPM.
+
 Capstone Proposals
 Should include the following.
 
 1. Problem Statement
-Define a problem someone is having that can be solved with software.
+   Define a problem someone is having that can be solved with software.
 
 This portfolio website serves multiple purposes. Primarily, it allows users to learn more about me, my skills, and my capabilities.
 
@@ -18,9 +24,6 @@ JAY TRADING: https://coda.io/@presh-dineshkumar/jay-trading
 DEBANK: https://debank.com/
 MINT : https://mint.intuit.com/
 
-
-
-
 <!-- Note: the problem does not have to be original. It's absolutely okay to recreate an existing application: Instagram, Slack, etc. -->
 
 <!-- Example
@@ -29,9 +32,6 @@ Running clubs across the world host group runs that are open to the public. Grou
 Group run discovery is difficult. Some running clubs post a message on their home page. Others post on social media. Still others don't post anything at all and hope that word-of-mouth will spread the message. When clubs do post a message, it's usually not on a formal calendar or easy to find on a map. It's not clear if the run has already occurred.
 
 Worse, there's no easy way to sign up for a group run. Clubs never know who will show up. If a group run is limited, it's embarrassing when too many people show up. It's also a little embarrassing when no one shows up. -->
-
-
-
 
 2. Technical Solution
 <!-- Briefly describe a technical solution to your problem with a couple concrete scenarios.
@@ -46,7 +46,7 @@ Scenario 2
 Kelsey isn't a member of a running club, he's not ready for that commitment, but he does like to run with a group once in a while. Each weekend, he uses the Group Run application to browse runs near his Chicago neighborhood. If it feels right, he signs up and runs. There are a few running clubs near him. He doesn't have to join a club. He can pick and choose only the runs that interest him. -->
 
 3. Glossary
-Define key domain terms. This won't map one-to-one with model classes, but it may be close.
+   Define key domain terms. This won't map one-to-one with model classes, but it may be close.
 
 <!-- Example
 Running Club
@@ -75,8 +75,8 @@ Approve a run (ADMIN).
 Browse runs (anyone).
 Sign up for a run (authenticated).
 Apply for membership (authenticated).
-Approve a membership (ADMIN). -->
-5. User Stories/Scenarios
+Approve a membership (ADMIN). --> 5. User Stories/Scenarios
+
 <!-- Elaborate use stories.
 
 Example
